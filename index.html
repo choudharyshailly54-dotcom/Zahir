@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Haven | Archive Sync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🎵 BACKGROUND MUSIC -->
+    <audio id="portalMediaTrack" loop>
+        <source src="PASTE_YOUR_DIRECT_AUDIO_LINK_HERE" type="audio/mpeg">
+    </audio>
+
+    <!-- 🎬 Entrance Flash Overlay -->
+    <div id="entrance-overlay" onclick="executeCinematicFlash()">
+        <button class="enter-btn">INITIALIZE CORE LINK</button>
+    </div>
+
+    <!-- 🌌 Background Canvas -->
+    <div class="game-sky-bg">
+        <div class="cinematic-cloud cloud-1"></div>
+        <div class="cinematic-cloud cloud-2"></div>
+    </div>
+
+    <!-- 📱 Core Hub Layout -->
+    <div id="main-dashboard">
+        <nav>
+            <button class="nav-tab active-tab" onclick="navigateHub('timeline')">REGISTRY</button>
+            <button class="nav-tab" onclick="navigateHub('puzzle')">DECRYPTION</button>
+            <button class="nav-tab" onclick="navigateHub('box')">VAULT</button>
+        </nav>
+
+        <!-- Page 1: Live Registry Clock -->
+        <div id="page-timeline" class="page-content active-page">
+            <h3 class="page-title">TIME ELAPSED CONNECTIVITY</h3>
+            <div class="counter-grid">
+                <div class="count-box"><span id="days">00</span><label>Days</label></div>
+                <div class="count-box"><span id="hours">00</span><label>Hours</label></div>
+                <div class="count-box"><span id="mins">00</span><label>Mins</label></div>
+                <div class="count-box"><span id="secs">00</span><label>Secs</label></div>
+            </div>
+            <p class="status-subtext">Signal synchronization verified across both coordinates.</p>
+        </div>
+
+        <!-- Page 2: Game Decryption Grid -->
+        <div id="page-puzzle" class="page-content">
+            <h3 class="section-heading">Security Block Alignment</h3>
+            <div class="puzzle-grid" id="keyGrid">
+                <div class="puzzle-piece" id="p1">01</div><div class="puzzle-piece" id="p2">02</div>
+                <div class="puzzle-piece" id="p3">03</div><div class="puzzle-piece" id="p4">04</div>
+                <div class="puzzle-piece" id="p5">05</div><div class="puzzle-piece" id="p6">06</div>
+                <div class="puzzle-piece" id="p7">07</div><div class="puzzle-piece" id="p8">08</div>
+                <div class="puzzle-piece" id="p9">09</div><div class="puzzle-piece" id="p10">10</div>
+            </div>
+            <div class="quiz-container" id="quizBox">
+                <h4 id="questionText">Awaiting Core Registry Data...</h4>
+                <div class="quiz-options" id="optionsBox"></div>
+            </div>
+        </div>
+
+        <!-- Page 3: 3D Vault Frame -->
+        <div id="page-box" class="page-content">
+            <div class="box-scene">
+                <div class="wooden-box" id="physicalBox" onclick="attemptBoxActivation()">
+                    <div class="brass-lock"></div>
+                </div>
+            </div>
+            <div id="boxStatus" class="status-subtext">VAULT SYSTEM STATUS: LOCKED</div>
+
+            <!-- Extended Five-Minute Progress Bar -->
+            <div id="revealTimerBox" style="display:none;">
+                <h4 class="decrypt-heading">DECRYPTING SECURE SECTOR...</h4>
+                <p class="decrypt-subtext">Sync constraints require a 5-minute initialization window. Sit back, listen to the track, and read closely as the file decrypts.</p>
+                <div id="countdownDisplay">05:00</div>
+                <div class="progress-track"><div class="progress-fill" id="timerProgress"></div></div>
+            </div>
+
+            <!-- Merged Master Content -->
+            <div class="letter-archive" id="secretVault">
+                <div class="merged-manifesto-card">
+                    <span class="transmission-tag">[ SYSTEM TRANSMISSION LOG: RE-CENTRIC SYNAPSE ]</span><br><br>
+                    Tanush, I see absolutely everything you are doing right now. I know how much pressure you carry on your shoulders every single day for this JEE prep in Hyderabad, and I am genuinely so incredibly happy that you have finally shifted into a good PG where you have a comfortable, proper space to breathe and focus. I see the quiet tiredness in your eyes, and I appreciate every tiny block of time you carve out just to text me during your breaks. My love for you is deep, real, and completely stubborn—I don't care about the thousands of kilometers between Delhi and your PG, and I haven't changed my mind about choosing you over anything and everything. But you need to realize something critically important right now: my patience, my constant understanding, and my presence in your life are gifts born out of pure love, not things you are entitled to by default. When you let the distance or your routine make you careless, when you take my warmth for granted and treat my efforts like a background option, it fractures something very deep inside us. I built this entire portal to remind you exactly of who we are, how perfectly you have been cared for, and how hard I have fought to hold down our fort while you build your future. I am right here, bachha. I am not running away, and I am not giving up on us. But let this structural warning be completely locked into your memory—I respect myself far too much to ever settle for being treated like an afterthought. Read this, feel the weight of it, and remember exactly what you have standing right beside you. Lean into me, let out your stress, and let's pull our alignment back to where it belongs.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔐 Password Overlay Modal -->
+    <div id="riddle-modal">
+        <div class="riddle-card">
+            <h3 class="auth-title">AUTHENTICATION CHALLENGE</h3>
+            <p class="riddle-prompt">I am a phrase you hear every night, yet we haven't truly shared me in person yet. I am the boundary this irritating screen creates, but also the first thing I want to give you when you finally come back to reality. What am I?</p>
+            <input type="text" id="riddleAnswer" placeholder="INPUT SECURITY DECRYPT PHRASE...">
+            <button onclick="executeRiddleValidation()">SUBMIT PHRASE MATCH</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
